@@ -506,6 +506,11 @@ footer p.legal a {
     -webkit-text-decoration: underline 2px #084060;
             text-decoration: underline 2px #084060;
   }
+  .hero img {
+    border-style: none;
+    width: 100%;
+    height: auto;
+  }
   footer div {
     display: grid;
     grid-template-columns: auto auto;
@@ -521,6 +526,11 @@ footer p.legal a {
   nav ul li a {
     padding: 0.5rem 10px;
     font-size: 0.9rem;
+  }
+  .hero img {
+    border-style: none;
+    width: 100%;
+    height: auto;
   }
   footer div {
     display: grid;

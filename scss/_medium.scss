@@ -12,6 +12,13 @@ nav{
     text-decoration: underline 2px $accentColor;
  } // end hover
 } // end nav
+//hero
+.hero{
+    img{
+        border-style: none;
+        width: 100%;
+        height: auto;
+    }}
 footer div {
     display: grid;
     grid-template-columns: auto auto;

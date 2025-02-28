@@ -8,6 +8,12 @@ nav ul li a {
     padding: .5rem $gutter;
     font-size: .9rem;
 }
+.hero{
+    img{
+        border-style: none;
+        width: 100%;
+        height: auto;
+    }}
 footer div {
     display: grid;
     grid-template-columns: auto auto auto;
