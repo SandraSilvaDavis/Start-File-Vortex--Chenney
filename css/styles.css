@@ -479,6 +479,7 @@ footer section.social a:hover {
 }
 footer section.social section.location {
   font-size: 1.5rem;
+  padding-left: 0.5rem;
 }
 footer p.legal {
   font-size: 0.85rem;
