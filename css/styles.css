@@ -361,6 +361,12 @@ nav ul li.active a {
   border-radius: 10px;
 }
 
+.hero img {
+  border-style: none;
+  width: 100%;
+  height: auto;
+}
+
 /* --------------------------- MAIN --------------------------- */
 main h1 {
   padding: 1rem 10px 0.5rem 10px;
