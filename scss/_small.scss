@@ -31,7 +31,7 @@ header {
     span {
         font-size: 1.6rem;
         font-weight: $lightWeight;
-        color: $primaryColor;
+        color: $secondaryColor;
     }
 } // end header
 
@@ -59,7 +59,7 @@ nav{
         }//end ul li a
         ul li.active a {
             background-color: rgba(255, 255, 255, 0.8);
-            color:$primaryColor;
+            color:$secondaryColor;
             border-radius: 10px
         }
 }
@@ -166,8 +166,10 @@ main //> div > div {
 footer {
     section {}
     section.contact{
-p{font-size: 1.2rem; margin: .5rem;}
-ion-icon{ color:rgb(178, 184, 209); padding-right: 5px;}
+p{font-size: 1.2rem; 
+    margin: .5rem;
+color:$secondaryColor}
+ion-icon{ color:rgb(49, 57, 88); padding-right: 5px;}
     }// end of contact 
     section.social{
 display:flex;
@@ -178,7 +180,7 @@ a {
     font-size: 2rem;
     margin: .5rem;
     padding: .5rem;
-    color: rgb(9, 25, 55);
+    color: rgb(29, 47, 80);
     &:hover {
         background-color: antiquewhite;
     
@@ -187,11 +189,12 @@ a {
     section.location{
     font-size: 1.5rem;
     padding-left: 1.5rem 10px
+   
     }}// end of location
    p.legal{ font-size: .85rem;
     padding: 5rem $gutter;
-    color: $greyColor;
+    color: #e7f7fb;
     text-align: center;
     line-height: $leading;
-    a {color: $greyColor;}}
+    a {color: #e7f7fb;}}
 }// end footer

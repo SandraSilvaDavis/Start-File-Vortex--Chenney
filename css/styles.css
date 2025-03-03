@@ -334,12 +334,12 @@ header {
 header span {
   font-size: 1.6rem;
   font-weight: 300;
-  color: #6b9bbe;
+  color: #033860;
 }
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 #navWrapper {
-  background-color: #6b9bbe;
+  background-color: #e0e7ed;
 }
 
 nav ul {
@@ -357,7 +357,7 @@ nav ul li a {
 }
 nav ul li.active a {
   background-color: rgba(255, 255, 255, 0.8);
-  color: #6b9bbe;
+  color: #033860;
   border-radius: 10px;
 }
 
@@ -451,15 +451,16 @@ main > div > div img {
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
-  background-color: #6b9bbe;
+  background-color: #e0e7ed;
 }
 
 footer section.contact p {
   font-size: 1.2rem;
   margin: 0.5rem;
+  color: #033860;
 }
 footer section.contact ion-icon {
-  color: rgb(178, 184, 209);
+  color: rgb(49, 57, 88);
   padding-right: 5px;
 }
 footer section.social {
@@ -472,7 +473,7 @@ footer section.social a {
   font-size: 2rem;
   margin: 0.5rem;
   padding: 0.5rem;
-  color: rgb(9, 25, 55);
+  color: rgb(29, 47, 80);
 }
 footer section.social a:hover {
   background-color: antiquewhite;
@@ -484,12 +485,12 @@ footer section.social section.location {
 footer p.legal {
   font-size: 0.85rem;
   padding: 5rem 10px;
-  color: #111f66;
+  color: #e7f7fb;
   text-align: center;
   line-height: 150%;
 }
 footer p.legal a {
-  color: #111f66;
+  color: #e7f7fb;
 }
 
 @media only screen and (min-width: 35rem) {
