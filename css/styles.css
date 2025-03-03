@@ -485,12 +485,12 @@ footer section.social section.location {
 footer p.legal {
   font-size: 0.85rem;
   padding: 5rem 10px;
-  color: #e7f7fb;
+  color: #033860;
   text-align: center;
   line-height: 150%;
 }
 footer p.legal a {
-  color: #e7f7fb;
+  color: #033860;
 }
 
 @media only screen and (min-width: 35rem) {

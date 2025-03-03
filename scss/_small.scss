@@ -193,8 +193,8 @@ a {
     }}// end of location
    p.legal{ font-size: .85rem;
     padding: 5rem $gutter;
-    color: #e7f7fb;
+    color: $secondaryColor;
     text-align: center;
     line-height: $leading;
-    a {color: #e7f7fb;}}
+    a {color:$secondaryColor;}}
 }// end footer
