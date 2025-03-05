@@ -222,17 +222,19 @@ footer {
     section.social {
         display: flex;
         justify-content: left;
-        img{ width: 20px; height: auto;}
+        img{ width: 30px; height: auto;}
         a {
             display: block;
             border: transparent 1px #e7f7fb;
-            font-size: 2rem;
+            border-radius: 50%;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease;
             margin: .5rem;
             padding: .5rem;
             color: rgb(29, 47, 80);
 
             &:hover {
-                background-color: antiquewhite;
+                background-color: rgb(26, 36, 71);
+                transform: scale(1.1);
 
             }
         }
