@@ -9,7 +9,9 @@ html {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-} // end all elements
+}
+
+// end all elements
 
 
 /* --------------------------- BODY --------------------------- */
@@ -21,19 +23,25 @@ body {
 
 
 /* --------------------------- HEADER --------------------------- */
-#headerWrapper {border-bottom: 1px solid $greyColor;}
+#headerWrapper {
+    border-bottom: 1px solid $greyColor;
+}
+
 header {
     display: grid;
     grid-template-columns: 50px auto;
     column-gap: $gutter;
     align-items: center; //vertically
     padding: .5rem $gutter;
+
     span {
         font-size: 1.6rem;
         font-weight: $lightWeight;
         color: $secondaryColor;
     }
-} // end header
+}
+
+// end header
 
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
@@ -42,29 +50,35 @@ header {
 #navWrapper {
     background-color: $primaryColor;
 }
-nav{
 
-    ul{
-        padding:0;
+nav {
+
+    ul {
+        padding: 0;
         margin: 0 $gutter;
     }
+
     ul li {
         list-style-type: none;
-        }
-        ul li a {
-            color: $greyColor;
-            text-decoration: none;
-            display: block;
-            padding: .8rem $gutter;
-        }//end ul li a
-        ul li.active a {
-            background-color: rgba(255, 255, 255, 0.8);
-            color:$secondaryColor;
-            border-radius: 10px
-        }
+    }
+
+    ul li a {
+        color: $greyColor;
+        text-decoration: none;
+        display: block;
+        padding: .8rem $gutter;
+    }
+
+    //end ul li a
+    ul li.active a {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: $secondaryColor;
+        border-radius: 10px
+    }
 }
-.hero{
-    img{
+
+.hero {
+    img {
         border-style: none;
         width: 100%;
         height: auto;
@@ -81,72 +95,95 @@ nav{
 
 /* --------------------------- MAIN --------------------------- */
 main //> div > div {
-    h1 {
-        padding: 1rem $gutter.5rem $gutter;
-        font-size: 1.5rem;
-        color: $secondaryColor;
-        font-weight: $lightWeight
+
+h1 {
+    padding: 1rem $gutter.5rem $gutter;
+    font-size: 1.5rem;
+    color: $secondaryColor;
+    font-weight: $lightWeight
+}
+
+picture.hero {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+p {
+    padding: .5rem $gutter;
+    color: #333;
+    line-height: $leading;
+}
+
+main {
+    padding: 1rem 2vw;
+}
+
+main>div {
+    border: 3px dashed rgb(254, 254, 254);
+}
+
+//apply to all children
+main>div>div {
+    border: 1px dashed rgb(243, 239, 241);
+    text-align: center;
+
+    h2 {
+        font-size: 1.2rem;
     }
-    picture.hero {
+
+    img {
         display: block;
         width: 100%;
         height: auto;
     }
-    p {
-        padding: .5rem $gutter;
-        color: #333;
-        line-height: $leading;
+}
+
+//Flex Box Cards 1
+.parent1 {
+    margin: 02vw;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    column-gap: 8px;
+
+    img {
+        width: 100%;
+        height: auto;
     }
-    main {padding: 1rem 2vw;}
-    main > div {border: 3px dashed rgb(254, 254, 254);}
-    //apply to all children
-    main > div > div {
-        border: 1px dashed rgb(243, 239, 241);
-        text-align: center;
-        h2 {font-size:1.2rem;}
-        img {display: block; width: 100%; height: auto;}
-    }
-    //Flex Box Cards 1
-    .parent1{
-       margin: 02vw;
-       display: flex;
-       flex-wrap: wrap;
-        row-gap: 8px;
-       column-gap: 8px;
-       img {
-         width: 100%;
-          height: auto;
-        }
-    }
-   //Flex Box Cards 2
-   .parent2{
+}
+
+//Flex Box Cards 2
+.parent2 {
     margin: 0 2vw;
-   display: flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 5px 20px;
-    div{
-        flex-grow:1;
-       flex-grow: 1;
-       flex-basis: 200px;
+
+    div {
+        flex-grow: 1;
+        flex-grow: 1;
+        flex-basis: 200px;
     }
-   }
+}
 
-   // Flex Box Cards 3
-   .parent3 {
-    margin:m0 2vw;
+// Flex Box Cards 3
+.parent3 {
+    margin: m0 2vw;
     display: flex;
-   justify-content: center;
+    justify-content: center;
     row-gap: 8px;
-   div{
-   flex-shrink: 1;
-   flex-basis: 200px;
-   }
 
-   }
+    div {
+        flex-shrink: 1;
+        flex-basis: 200px;
+    }
 
- //Grid Cards 4
- .parent4 {
+}
+
+//Grid Cards 4
+.parent4 {
     display: grid;
     //grid-template-colums: 1fr 1fr;
     //grid-template-colums: repeat(3,1fr);
@@ -155,46 +192,70 @@ main //> div > div {
     //grid_template-colums: repeat(autofit, minmax(200px,1fr));
     //gap: 16px 8px;
 
- }
- 
+}
+
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
     background-color: $primaryColor;
-} // end footer wrapper
+}
+
+// end footer wrapper
 
 footer {
     section {}
-    section.contact{
-p{font-size: 1.2rem; 
-    margin: .5rem;
-color:$secondaryColor}
-ion-icon{ color:rgb(49, 57, 88); padding-right: 5px;}
-    }// end of contact 
-    section.social{
-display:flex;
-justify-content:left;
-a {
-    display:block;
-    border:transparent 1px #e7f7fb;
-    font-size: 2rem;
-    margin: .5rem;
-    padding: .5rem;
-    color: rgb(29, 47, 80);
-    &:hover {
-        background-color: antiquewhite;
-    
+
+    section.contact {
+        p {
+            font-size: 1.2rem;
+            margin: .5rem;
+            color: $secondaryColor
+        }
+
+        ion-icon {
+            color: rgb(49, 57, 88);
+            padding-right: 5px;
+        }
+    }
+
+    // end of contact 
+    section.social {
+        display: flex;
+        justify-content: left;
+        img{ width: 20px; height: auto;}
+        a {
+            display: block;
+            border: transparent 1px #e7f7fb;
+            font-size: 2rem;
+            margin: .5rem;
+            padding: .5rem;
+            color: rgb(29, 47, 80);
+
+            &:hover {
+                background-color: antiquewhite;
+
+            }
+        }
+
+        // end of social 
+        section.location {
+            font-size: 1.5rem;
+            padding-left: 1.5rem 10px
+        }
+    }
+
+    // end of location
+    p.legal {
+        font-size: .85rem;
+        padding: 5rem $gutter;
+        color: $secondaryColor;
+        text-align: center;
+        line-height: $leading;
+
+        a {
+            color: $secondaryColor;
+        }
+    }
 }
-    }// end of social 
-    section.location{
-    font-size: 1.5rem;
-    padding-left: 1.5rem 10px
-   
-    }}// end of location
-   p.legal{ font-size: .85rem;
-    padding: 5rem $gutter;
-    color: $secondaryColor;
-    text-align: center;
-    line-height: $leading;
-    a {color:$secondaryColor;}}
-}// end footer
+
+// end footer

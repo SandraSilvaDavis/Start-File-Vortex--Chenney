@@ -467,6 +467,10 @@ footer section.social {
   display: flex;
   justify-content: left;
 }
+footer section.social img {
+  width: 20px;
+  height: auto;
+}
 footer section.social a {
   display: block;
   border: transparent 1px #e7f7fb;
