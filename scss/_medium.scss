@@ -19,6 +19,12 @@ nav{
         width: 100%;
         height: auto;
     }}
+//create the For Loop
+
+    @for $i from 1 through 12 { 
+        $w: calc ($i /12) * 100%;
+        .medium-#{$i} {flex-basis: $w;}
+    }
 footer div {
     display: grid;
     grid-template-columns: auto auto;

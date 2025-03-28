@@ -84,8 +84,74 @@ nav {
         height: auto;
     }
 }
+// end hero
+//end nav wrapper
+/*--- ROW AND COLUMS LAYOUT--*/
+.row.card1 {
+    display: flex;
+    flex-wrap: wrap; // Ensures cards wrap to the next row if there's not enough space
+    gap: 1rem; // Adds spacing between cards
+    margin: 1rem 0;
+}
 
+.column {
+    flex: 1 1 calc(33.33% - 1rem); // Three cards per row on large screens
+    max-width: calc(33.33% - 1rem); // Ensures consistent card size
 
+    @media (max-width: 1024px) { // Medium screens
+        flex: 1 1 calc(50% - 1rem); // Two cards per row
+        max-width: calc(50% - 1rem);
+    }
+
+    @media (max-width: 768px) { // Small screens
+        flex: 1 1 100%; // Full width for small screens
+        max-width: 100%;
+    }
+}
+
+figure {
+    border-radius: 8px; // Rounded corners
+    background: lightgray 50% / cover no-repeat; // Default background
+    overflow: hidden; // Ensures content doesn't overflow the card
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Subtle shadow for a card effect
+    margin: 0;
+    padding: 0; // Removes extra padding
+    text-align: center;
+    height: 250px; // Fixed height for the card
+}
+
+figure img {
+    display: none; // Hides the image since the background is now applied to the card itself
+}
+
+figcaption {
+    padding: 0.5rem; // Padding around the caption
+    font-size: 1rem; // Font size for captions
+    color: #333; // Text color
+    font-weight: 500;
+    text-align: center;
+}
+
+.seemore {
+    display: block;
+    text-decoration: none;
+    margin: 1rem auto;
+    width: 200px; // Adjust width as needed
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: 8px; // Rounded corners
+    font-size: 1rem;
+    font-family: $defaultFont; // Use the default font
+    font-weight: $normalWeight; // Use the normal font weight
+    color: $buttonTextColor; // Button text color
+    background-color: $buttonBackground; // Button background color
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+        background-color: $buttonHoverBackground; // Lighter hover color
+        transform: scale(1.05); // Slightly enlarge on hover
+    }
+}
 
 
 
@@ -193,7 +259,26 @@ main>div>div {
     //gap: 16px 8px;
 
 }
+// styling the rows
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0;
+    padding: 0 8px;
+    border: greenyellow solid 1px;
+}
+// styling the columns
+.column{
+    padding: 0 8px;
+    border: hotpink dashed 1px;
+}
+//Create that for Loop
+@for $i from 1 through 12 { 
+    $w: calc ($i /12) * 100%;
+    .small-#{$i} {flex-basis: $w;}
 
+}
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
@@ -209,7 +294,7 @@ footer {
         p {
             font-size: 1.2rem;
             margin: .5rem;
-            color: $secondaryColor
+            color: $secondaryColor;
         }
 
         ion-icon {
@@ -233,9 +318,9 @@ footer {
             color: rgb(29, 47, 80);
 
             &:hover {
-                background-color: rgb(221, 225, 239);
+                
                 transform: scale(1.1);
-
+                box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
             }
         }
 
