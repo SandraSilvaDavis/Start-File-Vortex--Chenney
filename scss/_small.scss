@@ -264,8 +264,9 @@ main>div>div {
 // grid layout
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); // Responsive grid layout
     gap: 2rem;
+    position: relative;
 }
 
 .card {
@@ -283,13 +284,13 @@ main>div>div {
         display: block;
     }
 
-    .card-text {
+    p {
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
-        background: rgba(0, 0, 0, 0.6);
-        color: white;
+        background: rgba(0, 0, 0, 0.6); // Semi-transparent background
+        color: white; // Ensure text is visible against the background
         padding: 1rem;
         font-size: 1rem;
         opacity: 0; /* Default state: hidden */
@@ -297,35 +298,43 @@ main>div>div {
     }
 
     &:hover {
-        transform: scale(1.02);
+        transform: scale(1.02); // Slightly enlarge the card on hover
 
-        .card-text {
+        p {
             opacity: 1; /* Show text on hover */
         }
     }
 }
 
-/* Hover-capable screen rule */
-@media (hover: hover) and (pointer: fine) {
-    .card .card-text {
-        opacity: 0; /* Ensure text is hidden by default on hover-capable devices */
+/* Responsive Classes Using Loops */
+@for $i from 1 through 12 {
+    $w: calc($i / 12 * 100%);
+    .small-#{$i} {
+        flex-basis: $w; // Width for small screens
+        max-width: $w;
+    }
+
+    @media (min-width: 768px) {
+        .medium-#{$i} {
+            flex-basis: $w; // Width for medium screens
+            max-width: $w;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .large-#{$i} {
+            flex-basis: $w; // Width for large screens
+            max-width: $w;
+        }
     }
 }
 
 /* Always show text on mobile screens */
 @media (max-width: 768px) {
-    .card .card-text {
+    .card p {
         opacity: 1; /* Always visible on smaller screens */
     }
 }
-  
-  // optional flex-based layout helper using @for loop
-  @for $i from 1 through 12 {
-    $w: calc($i / 12) * 100%;
-    .small-#{$i} {
-      flex-basis: $w;
-    }
-  }
   .seemore {
     display: block;
     text-decoration: none;
