@@ -17,10 +17,10 @@ nav ul li a {
     // end hero
 // end nav wrapper
 // /*--- ROW AND COLUMS LAYOUT--*/
-.row figure {
+.grid {
     position:relative;
-    &:hover figcaption {opacity: 1;}
-    figcaption {
+    &:hover p {opacity: 1;}
+    p {
         position:absolute;
         bottom:0;
         
@@ -28,7 +28,7 @@ nav ul li a {
        width:100%;
        opacity: 0;
         padding:3rem.5rem 0;
-        transition: opacity 0.5s ease;
+        transition: opacity 0.6s ease;
     }
 }
 // create the For Loop
