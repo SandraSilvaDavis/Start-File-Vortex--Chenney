@@ -392,8 +392,15 @@ main {
   padding: 1rem 2vw;
 }
 
-main > div {
+main div {
   border: 3px dashed rgb(254, 254, 254);
+}
+
+.title h2 {
+  padding: 1rem 10px 0.5rem;
+  font-size: 1.2rem;
+  color: #033860;
+  font-weight: 300;
 }
 
 main > div > div {
@@ -480,6 +487,7 @@ main > div > div img {
   background: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 1rem;
+  margin: 0;
   font-size: 1rem;
   opacity: 0; /* Default state: hidden */
   transition: opacity 0.3s ease;
