@@ -1,0 +1,56 @@
+/* NAVIGATION STUFF GOES HERE  */
+#theButton {
+    display: none;
+
+}
+#thexButton {
+    display: none;
+
+}
+#theNav {
+    grid-template-rows: 1fr;
+
+}
+#theNav ul, #theNav ul.open {
+    display:flex;
+    li a {
+        padding: .4rem 1rem;
+        border:none;
+    }
+a:hover {
+    text-decoration: underline;
+}
+}
+//end button
+nav{
+    ul {
+        display: flex;
+        justify-content: flex-strat;
+        column-gap: $gutter;
+    }//end ul
+    ul li a {
+        margin: 10px 0
+ }
+ ul li a:hover {
+    text-decoration: underline 2px $accentColor;
+ } // end hover
+} // end nav
+//hero
+.hero{
+    img{
+        border-style: none;
+        width: 100%;
+        height: auto;
+    }}
+//create the For Loop
+
+    @for $i from 1 through 12 { 
+        $w: calc ($i /12) * 100%;
+        .medium-#{$i} {flex-basis: $w;}
+    }
+footer div {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items:center;
+
+}
